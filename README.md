@@ -1,0 +1,2 @@
+# SwiftTraning
+Swift初学者のためのリポジトリになればいいな
