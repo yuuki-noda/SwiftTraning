@@ -2,7 +2,8 @@
 
 ## 概要
 
-Swift の書き方や、UIKit を用いたレイアウト、AutoLayout の組み方などを学べる予定
+UIKit を用いたレイアウト、AutoLayout の組み方などを学べる予定
+
 初学者を想定しており、アプリを作ったことがない人をターゲットとしています。
 
 ## 前提
@@ -11,16 +12,23 @@ Swift の書き方や、UIKit を用いたレイアウト、AutoLayout の組み
 
 - Xcode がインストールされていること
 - git の基本操作ができること
+- Swift の基本構文を理解していること
 
 ### 任意
 
-- https://developer.apple.com/tutorials/app-dev-training/#uikit-essentials の内容(UIKit)を実施し理解していること
+必須ではありませんが、自信がない方は以下のサイトを一通り見ておくと良いかもしれません
+
+- [公式ガイド](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/thebasics/)
+
+- [Dev turorial](https://developer.apple.com/tutorials/app-dev-training)
 
 ## 使い方
 
 サンプルといくつかの課題を提供します。自身でリポジトリを作成し、その課題に取り組んでみてください。
+
 その後模範解答を確認して自分がどこまで理解できているか確認してください。
 
-## 前準備(サンプル)
+## 課題一覧
 
-1. Xcode でアプリを作成する
+1. AutoLayout について
+2. UIKit について
