@@ -18,6 +18,10 @@
 		B6A33CB72CF6D2CA00289078 /* Sample3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A33CB52CF6D2CA00289078 /* Sample3ViewController.xib */; };
 		B6A33CBB2CF6E82B00289078 /* Sample4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A33CB92CF6E82B00289078 /* Sample4ViewController.swift */; };
 		B6A33CBC2CF6E82B00289078 /* Sample4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A33CBA2CF6E82B00289078 /* Sample4ViewController.xib */; };
+		B6A33CC12CF71D2000289078 /* Sample1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A33CBF2CF71D2000289078 /* Sample1TableViewController.swift */; };
+		B6A33CC22CF71D2000289078 /* Sample1TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A33CC02CF71D2000289078 /* Sample1TableViewController.xib */; };
+		B6A33CC52CF72BF200289078 /* Sample1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A33CC32CF72BF200289078 /* Sample1TableViewCell.swift */; };
+		B6A33CC62CF72BF200289078 /* Sample1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A33CC42CF72BF200289078 /* Sample1TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		B6A33CB52CF6D2CA00289078 /* Sample3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sample3ViewController.xib; sourceTree = "<group>"; };
 		B6A33CB92CF6E82B00289078 /* Sample4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample4ViewController.swift; sourceTree = "<group>"; };
 		B6A33CBA2CF6E82B00289078 /* Sample4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sample4ViewController.xib; sourceTree = "<group>"; };
+		B6A33CBF2CF71D2000289078 /* Sample1TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample1TableViewController.swift; sourceTree = "<group>"; };
+		B6A33CC02CF71D2000289078 /* Sample1TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sample1TableViewController.xib; sourceTree = "<group>"; };
+		B6A33CC32CF72BF200289078 /* Sample1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample1TableViewCell.swift; sourceTree = "<group>"; };
+		B6A33CC42CF72BF200289078 /* Sample1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sample1TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		B63E3E6F2CF427A700D745A8 /* SwiftTraining */ = {
 			isa = PBXGroup;
 			children = (
+				B6A33CBD2CF71CDC00289078 /* UITableView */,
 				B686FD052CF5A9C100C055F0 /* AutoLayout */,
 				B63E3E702CF427A700D745A8 /* AppDelegate.swift */,
 				B63E3E792CF427A900D745A8 /* Assets.xcassets */,
@@ -120,6 +129,25 @@
 				B6A33CBA2CF6E82B00289078 /* Sample4ViewController.xib */,
 			);
 			path = Sample4;
+			sourceTree = "<group>";
+		};
+		B6A33CBD2CF71CDC00289078 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				B6A33CBE2CF71CF000289078 /* Sample1 */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		B6A33CBE2CF71CF000289078 /* Sample1 */ = {
+			isa = PBXGroup;
+			children = (
+				B6A33CBF2CF71D2000289078 /* Sample1TableViewController.swift */,
+				B6A33CC02CF71D2000289078 /* Sample1TableViewController.xib */,
+				B6A33CC32CF72BF200289078 /* Sample1TableViewCell.swift */,
+				B6A33CC42CF72BF200289078 /* Sample1TableViewCell.xib */,
+			);
+			path = Sample1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,12 +208,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A33CC22CF71D2000289078 /* Sample1TableViewController.xib in Resources */,
 				B63E3E7D2CF427A900D745A8 /* LaunchScreen.storyboard in Resources */,
 				B686FD112CF5C2EF00C055F0 /* Sample2ViewController.xib in Resources */,
 				B6A33CB72CF6D2CA00289078 /* Sample3ViewController.xib in Resources */,
 				B63E3E7A2CF427A900D745A8 /* Assets.xcassets in Resources */,
 				B686FD0C2CF5AA0800C055F0 /* Sample1ViewController.xib in Resources */,
 				B6A33CBC2CF6E82B00289078 /* Sample4ViewController.xib in Resources */,
+				B6A33CC62CF72BF200289078 /* Sample1TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +230,8 @@
 				B6A33CBB2CF6E82B00289078 /* Sample4ViewController.swift in Sources */,
 				B63E3E712CF427A700D745A8 /* AppDelegate.swift in Sources */,
 				B6A33CB62CF6D2CA00289078 /* Sample3ViewController.swift in Sources */,
+				B6A33CC52CF72BF200289078 /* Sample1TableViewCell.swift in Sources */,
+				B6A33CC12CF71D2000289078 /* Sample1TableViewController.swift in Sources */,
 				B686FD102CF5C2EF00C055F0 /* Sample2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
