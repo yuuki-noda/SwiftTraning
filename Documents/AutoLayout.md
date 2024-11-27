@@ -196,3 +196,51 @@ The methods in the UIConstraintBasedLayoutDebugging category on UIView listed in
 ![sample4-5](./images/autolayout-sample3-5.gif)
 
 無事に上がりました。(ボタンが見えなくなってるので良くはないのですがサンプルのためご了承ください)
+
+## 可変コンポーネント同士の制約
+
+最後に AutoLayout とは直接関係ありませんがレイアウト組む上で覚えて欲しい概念として Content Hugging Priority と Content Compression Resistance Priority があります
+
+### Content Hugging Priority
+
+View が本来のサイズよりも大きくなることに抵抗する度合いを設定します。
+
+つまり、この値が大きくなればなるほど、View がそのコンテンツよりも大きくならないようになります。
+
+### Content Compression Resistance Priority
+
+View が本来のサイズよりも小さくなることに抵抗する度合いを設定します。
+
+つまり、この値が大きくなればなるほど、View がそのコンテンツよりも小さく縮小されないようになります。
+
+上記 2 つの Priority は横軸と縦軸の 2 つの値があります
+
+なおこれらの値は他の View の値と比較します。
+
+UILabel と UIButton ではデフォルト値が違うため注意が必要です
+
+### ユースケース
+
+例えば文字列が可変で横に 2 つ並べた状況を考えます。条件は以下です
+
+- 2 つのラベルは被ってはいけない
+- 2 つのラベルはそれぞれ左端と右端に配置されており、文字列長に応じてその横幅が伸びる
+- 左のラベルは商品名を表しており、2 つのラベルが被るときこちらの文字列が省略される
+- 右のラベルは値段を表しており、こちらのラベルは省略はされず全て表示される
+
+組んでみましょう。
+
+|                                                 |                                                 |
+| ----------------------------------------------- | ----------------------------------------------- |
+| ![sample4-1](./images/autolayout-sample4-1.png) | ![sample4-2](./images/autolayout-sample4-2.png) |
+
+エラーが出てしまいました。このように被らないように可変コンポーネントを複数配置すると、どちらの横幅を優先すれば良いのかコンピュータは分かりません。そのためどちらを省略させるのか決めてあげましょう
+
+今回は値段ラベルを省略したくありません。なので値段ラベルの Horizontal の Content Hugging Priority と Horizontal の Content Compression Resistance Priority を 1 上げましょう。
+
+(エラーは Content Hugging Priority のみのエラーが出てますが、文字列が長くなると Content Compression Resistance Priority のエラーも出てきます)
+|||
+|--|--|
+|![sample4-3](./images/autolayout-sample4-3.png)|![sample4-4](./images/autolayout-sample4-4.png)|
+
+いい感じに配置ができました
