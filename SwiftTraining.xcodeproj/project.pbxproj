@@ -14,6 +14,8 @@
 		B686FD0C2CF5AA0800C055F0 /* Sample1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B686FD0A2CF5AA0800C055F0 /* Sample1ViewController.xib */; };
 		B686FD102CF5C2EF00C055F0 /* Sample2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686FD0E2CF5C2EF00C055F0 /* Sample2ViewController.swift */; };
 		B686FD112CF5C2EF00C055F0 /* Sample2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B686FD0F2CF5C2EF00C055F0 /* Sample2ViewController.xib */; };
+		B6A33CB62CF6D2CA00289078 /* Sample3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A33CB42CF6D2CA00289078 /* Sample3ViewController.swift */; };
+		B6A33CB72CF6D2CA00289078 /* Sample3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A33CB52CF6D2CA00289078 /* Sample3ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B686FD0A2CF5AA0800C055F0 /* Sample1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sample1ViewController.xib; sourceTree = "<group>"; };
 		B686FD0E2CF5C2EF00C055F0 /* Sample2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample2ViewController.swift; sourceTree = "<group>"; };
 		B686FD0F2CF5C2EF00C055F0 /* Sample2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sample2ViewController.xib; sourceTree = "<group>"; };
+		B6A33CB42CF6D2CA00289078 /* Sample3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample3ViewController.swift; sourceTree = "<group>"; };
+		B6A33CB52CF6D2CA00289078 /* Sample3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sample3ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		B686FD052CF5A9C100C055F0 /* AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
+				B6A33CB32CF6D1ED00289078 /* Sample3 */,
 				B686FD0D2CF5C2DC00C055F0 /* Sample2 */,
 				B686FD062CF5A9CF00C055F0 /* Sample1 */,
 			);
@@ -92,6 +97,15 @@
 				B686FD0F2CF5C2EF00C055F0 /* Sample2ViewController.xib */,
 			);
 			path = Sample2;
+			sourceTree = "<group>";
+		};
+		B6A33CB32CF6D1ED00289078 /* Sample3 */ = {
+			isa = PBXGroup;
+			children = (
+				B6A33CB42CF6D2CA00289078 /* Sample3ViewController.swift */,
+				B6A33CB52CF6D2CA00289078 /* Sample3ViewController.xib */,
+			);
+			path = Sample3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +168,7 @@
 			files = (
 				B63E3E7D2CF427A900D745A8 /* LaunchScreen.storyboard in Resources */,
 				B686FD112CF5C2EF00C055F0 /* Sample2ViewController.xib in Resources */,
+				B6A33CB72CF6D2CA00289078 /* Sample3ViewController.xib in Resources */,
 				B63E3E7A2CF427A900D745A8 /* Assets.xcassets in Resources */,
 				B686FD0C2CF5AA0800C055F0 /* Sample1ViewController.xib in Resources */,
 			);
@@ -168,6 +183,7 @@
 			files = (
 				B686FD0B2CF5AA0800C055F0 /* Sample1ViewController.swift in Sources */,
 				B63E3E712CF427A700D745A8 /* AppDelegate.swift in Sources */,
+				B6A33CB62CF6D2CA00289078 /* Sample3ViewController.swift in Sources */,
 				B686FD102CF5C2EF00C055F0 /* Sample2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

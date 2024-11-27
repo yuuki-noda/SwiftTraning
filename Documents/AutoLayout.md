@@ -28,7 +28,7 @@ iOS の座標系は画面左上を原点とし原点の座標と横幅縦幅の 
 また親 View が存在する場合はその親 View の左上が子 View にとっての原点になります。
 (これは、親 View からはみ出すようなレイアウトを組む際に重要になってきます)
 
-AutoLayout でレイアウトを組む際は必ず 4 つの制約が必要になります。(例外あり)
+AutoLayout でレイアウトを組む際は特殊な場合を除いて必ず 4 つの制約が必要になります。
 
 制約が 5 個だったり、3 個だったりするものは何かおかしいので修正をしましょう。
 
@@ -97,7 +97,7 @@ UIStackView に存在する Spacing にマージン幅(高さ)を入れること
 
 ~~なおグリッド状のレイアウトを組むのであれば UICollectionView にするのが手っ取り早いというツッコミは無しでお願いします~~
 
-## Min 指定
+## Max 指定
 
 上記の UILabel の例では画面に収まる量の文字列でした。しかし、この文字列がもっと長かったらどうでしょうか？
 
@@ -122,7 +122,7 @@ UIStackView に存在する Spacing にマージン幅(高さ)を入れること
 
 修正しましょう。
 
-AutoLayout の制約は Equal だけでなく less than or equal (より小さい), greater than or equal (より大きい) が使えます
+**AutoLayout の制約は Equal だけでなく less than or equal (より小さい), greater than or equal (より大きい) が使えます**
 
 この制約を使いましょう
 
@@ -133,3 +133,66 @@ AutoLayout の制約は Equal だけでなく less than or equal (より小さ�
 | ![sample2-4](./images/autolayout-sample2-4.png) | ![sample2-5](./images/autolayout-sample2-5.png) |
 
 要望通りのレイアウトになりました。
+
+## MinMax 指定
+
+今固定の高さを持つラベルがあります。
+
+またユーザーアクションによって表示されるアクションシートが存在します。
+
+レイアウトの要件としては以下です。どのように実装しましょうか？
+
+- ラベルは y 軸の中心に位置する
+- 正し、アクションシートが表示された時は被らないようにずらす
+
+前サンプルを例に組んでみましょう。以下のような制約をつけてみました
+
+![sample3-1](./images/autolayout-sample3-1.png)
+
+実行してみましょう
+
+|                                                 |                                                 |
+| ----------------------------------------------- | ----------------------------------------------- |
+| ![sample3-2](./images/autolayout-sample3-2.gif) | ![sample3-3](./images/autolayout-sample3-3.gif) |
+
+縦の場合は良いのですが、横になったらアクションシートが全部出ません。
+
+XCode で実行した場合以下の Warning が出てるはずです。
+
+ざっくりと言うと、制約がバッティングしてるぞと言う話です
+
+```
+Unable to simultaneously satisfy constraints.
+	Probably at least one of the constraints in the following list is one you don't want.
+	Try this:
+		(1) look at each constraint and try to figure out which you don't expect;
+		(2) find the code that added the unwanted constraint or constraints and fix it.
+(
+    "<NSLayoutConstraint:0x600002123020 UILabel:0x10030b3a0.height == 200   (active)>",
+    "<NSLayoutConstraint:0x600002123110 UIView:0x10030d050.height == 200   (active)>",
+    "<NSLayoutConstraint:0x600002122e40 UILabel:0x10030b3a0.centerY == UIView:0x1004064a0.centerY   (active)>",
+    "<NSLayoutConstraint:0x600002125900 V:[UIView:0x10030d050]-(0)-|   (active, names: '|':UIView:0x1004064a0 )>",
+    "<NSLayoutConstraint:0x600002122c60 V:[UILabel:0x10030b3a0]-(>=16)-[UIView:0x10030d050]   (active)>",
+    "<NSLayoutConstraint:0x600002128cd0 'UIView-Encapsulated-Layout-Height' UIView:0x1004064a0.height == 375   (active)>"
+)
+
+Will attempt to recover by breaking constraint
+<NSLayoutConstraint:0x600002123110 UIView:0x10030d050.height == 200   (active)>
+
+Make a symbolic breakpoint at UIViewAlertForUnsatisfiableConstraints to catch this in the debugger.
+The methods in the UIConstraintBasedLayoutDebugging category on UIView listed in <UIKitCore/UIView.h> may also be helpful.
+```
+
+上記の場合は、ラベルがアクションシートの上 16pt 以上という制約とアクションシートの高さ 200 がバッティングしてます。その上で、高さ 200 の制約が破棄されていることがコンソールからわかります。
+
+このような場合は**制約に優先度をつける**ことで避けることができます。
+
+今回の場合はラベルを上に持ち上げたいのでラベルの y 軸の制約の優先度を 1 下げましょう
+
+![sample4-4](./images/autolayout-sample3-4.png)
+
+実行してみます。(縦の場合は動作が変わらないので横だけ載せます)
+
+![sample4-5](./images/autolayout-sample3-5.gif)
+
+無事に上がりました。(ボタンが見えなくなってるので良くはないのですがサンプルのためご了承ください)
