@@ -59,11 +59,11 @@ UITableView は section と row という概念で管理されています。い
 
 ## UITableViewCell
 
-こいつに表示したい要素を入れ込んで使う。インスタンスを生成する際は再利用を使う
+UITableView では表示したい要素を Cell で表現をします。また Cell のインスタンスを生成する際は再利用して、不要になった(表示されなくなった)インスタンスを使い回します。
 
-例えば 100 件あるリストを表示している際に、実際 100 個も Cell のインスタンスを生成してると、リストの要素数に応じて処理が遅くなる。メモリも食う。
+例えば 100 件あるリストを表示している際に、実際 100 個も Cell のインスタンスを生成してると、リストの要素数に応じて処理が遅くなったりメモリも食います。
 
-そのため UITableView は実際に表示されている Cell だけをインスタンス生成し、スクロールで新たな Cell が表示される際に、画面外に消えていったインスタンスを再利用する仕組みが用意されている
+そのため UITableView は実際に表示されている Cell だけをインスタンス生成し、スクロールで新たな Cell が表示される際に、画面外に消えていったインスタンスを再利用する仕組みが用意されています
 
 ```
 dequeueReusableCell(withIdentifier:for:)
@@ -79,9 +79,9 @@ UITableViewCell は正しく AutoLayout が組まれている場合、自動で�
 
 UITableView の rowHeight に UITableViewDelegate.automaticDimension を指定してあげると自動で計算してくれます。
 
-文字列長が可変な文字列が複数個あるリストを考えます
+あるパターンとして文字列長が可変な文字列が複数個あるリストを考えます
 
-以下のように UITableViewCell を用意します。UILabel の高さが決まれば、UITableViewCell の高さが決まるように制約をつけます。またラベルは Lines を 0 にすることを忘れないように
+以下のように UITableViewCell を用意します。UILabel の高さが決まれば、UITableViewCell の高さが決まるように制約をつけます。またラベルは Lines を 0 にすることを忘れないようにしてください
 
 また表示する ViewController に Delegate を実装させましょう。そこで高さを決める関数内で UITableView.automaticDimension を返します。
 

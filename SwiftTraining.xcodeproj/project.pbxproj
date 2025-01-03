@@ -22,6 +22,10 @@
 		B6A33CC22CF71D2000289078 /* Sample1TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A33CC02CF71D2000289078 /* Sample1TableViewController.xib */; };
 		B6A33CC52CF72BF200289078 /* Sample1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A33CC32CF72BF200289078 /* Sample1TableViewCell.swift */; };
 		B6A33CC62CF72BF200289078 /* Sample1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A33CC42CF72BF200289078 /* Sample1TableViewCell.xib */; };
+		B6A8D2D32D277E6300E5C0C9 /* UICollectionViewSample1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8D2D12D277E6300E5C0C9 /* UICollectionViewSample1ViewController.swift */; };
+		B6A8D2D42D277E6300E5C0C9 /* UICollectionViewSample1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A8D2D22D277E6300E5C0C9 /* UICollectionViewSample1ViewController.xib */; };
+		B6A8D2D72D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8D2D52D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.swift */; };
+		B6A8D2D82D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A8D2D62D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		B6A33CC02CF71D2000289078 /* Sample1TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sample1TableViewController.xib; sourceTree = "<group>"; };
 		B6A33CC32CF72BF200289078 /* Sample1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample1TableViewCell.swift; sourceTree = "<group>"; };
 		B6A33CC42CF72BF200289078 /* Sample1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Sample1TableViewCell.xib; sourceTree = "<group>"; };
+		B6A8D2D12D277E6300E5C0C9 /* UICollectionViewSample1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewSample1ViewController.swift; sourceTree = "<group>"; };
+		B6A8D2D22D277E6300E5C0C9 /* UICollectionViewSample1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICollectionViewSample1ViewController.xib; sourceTree = "<group>"; };
+		B6A8D2D52D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewSample1CollectionViewCell.swift; sourceTree = "<group>"; };
+		B6A8D2D62D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICollectionViewSample1CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 		B63E3E6F2CF427A700D745A8 /* SwiftTraining */ = {
 			isa = PBXGroup;
 			children = (
+				B6A8D2CD2D277DF500E5C0C9 /* UICollectionView */,
 				B6A33CBD2CF71CDC00289078 /* UITableView */,
 				B686FD052CF5A9C100C055F0 /* AutoLayout */,
 				B63E3E702CF427A700D745A8 /* AppDelegate.swift */,
@@ -150,6 +159,25 @@
 			path = Sample1;
 			sourceTree = "<group>";
 		};
+		B6A8D2CD2D277DF500E5C0C9 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				B6A8D2D02D277E3500E5C0C9 /* Sample1 */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		B6A8D2D02D277E3500E5C0C9 /* Sample1 */ = {
+			isa = PBXGroup;
+			children = (
+				B6A8D2D12D277E6300E5C0C9 /* UICollectionViewSample1ViewController.swift */,
+				B6A8D2D22D277E6300E5C0C9 /* UICollectionViewSample1ViewController.xib */,
+				B6A8D2D52D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.swift */,
+				B6A8D2D62D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.xib */,
+			);
+			path = Sample1;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,9 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A33CC22CF71D2000289078 /* Sample1TableViewController.xib in Resources */,
+				B6A8D2D82D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.xib in Resources */,
 				B63E3E7D2CF427A900D745A8 /* LaunchScreen.storyboard in Resources */,
 				B686FD112CF5C2EF00C055F0 /* Sample2ViewController.xib in Resources */,
 				B6A33CB72CF6D2CA00289078 /* Sample3ViewController.xib in Resources */,
+				B6A8D2D42D277E6300E5C0C9 /* UICollectionViewSample1ViewController.xib in Resources */,
 				B63E3E7A2CF427A900D745A8 /* Assets.xcassets in Resources */,
 				B686FD0C2CF5AA0800C055F0 /* Sample1ViewController.xib in Resources */,
 				B6A33CBC2CF6E82B00289078 /* Sample4ViewController.xib in Resources */,
@@ -229,8 +259,10 @@
 				B686FD0B2CF5AA0800C055F0 /* Sample1ViewController.swift in Sources */,
 				B6A33CBB2CF6E82B00289078 /* Sample4ViewController.swift in Sources */,
 				B63E3E712CF427A700D745A8 /* AppDelegate.swift in Sources */,
+				B6A8D2D72D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.swift in Sources */,
 				B6A33CB62CF6D2CA00289078 /* Sample3ViewController.swift in Sources */,
 				B6A33CC52CF72BF200289078 /* Sample1TableViewCell.swift in Sources */,
+				B6A8D2D32D277E6300E5C0C9 /* UICollectionViewSample1ViewController.swift in Sources */,
 				B6A33CC12CF71D2000289078 /* Sample1TableViewController.swift in Sources */,
 				B686FD102CF5C2EF00C055F0 /* Sample2ViewController.swift in Sources */,
 			);
