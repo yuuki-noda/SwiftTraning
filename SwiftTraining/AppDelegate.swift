@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UICollectionViewSample1ViewController()
+        window?.rootViewController = UICollectionViewSample2ViewController()
         window?.makeKeyAndVisible()
         return true
     }

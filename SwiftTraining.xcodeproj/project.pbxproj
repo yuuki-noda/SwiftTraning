@@ -26,6 +26,13 @@
 		B6A8D2D42D277E6300E5C0C9 /* UICollectionViewSample1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A8D2D22D277E6300E5C0C9 /* UICollectionViewSample1ViewController.xib */; };
 		B6A8D2D72D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8D2D52D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.swift */; };
 		B6A8D2D82D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A8D2D62D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.xib */; };
+		B6A8D2DC2D27C59F00E5C0C9 /* UICollectionViewSample2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8D2DA2D27C59F00E5C0C9 /* UICollectionViewSample2ViewController.swift */; };
+		B6A8D2DD2D27C59F00E5C0C9 /* UICollectionViewSample2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A8D2DB2D27C59F00E5C0C9 /* UICollectionViewSample2ViewController.xib */; };
+		B6A8D2E02D27CA0B00E5C0C9 /* BannerCarouselSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8D2DF2D27CA0B00E5C0C9 /* BannerCarouselSection.swift */; };
+		B6A8D2E32D27CC1000E5C0C9 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8D2E22D27CC1000E5C0C9 /* Banner.swift */; };
+		B6A8D2E72D27CD0A00E5C0C9 /* BannerCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8D2E52D27CD0A00E5C0C9 /* BannerCarouselCell.swift */; };
+		B6A8D2E82D27CD0A00E5C0C9 /* BannerCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A8D2E62D27CD0A00E5C0C9 /* BannerCarouselCell.xib */; };
+		B6A8D2EB2D27D9F900E5C0C9 /* UIImageView+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8D2EA2D27D9F900E5C0C9 /* UIImageView+SetImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +57,13 @@
 		B6A8D2D22D277E6300E5C0C9 /* UICollectionViewSample1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICollectionViewSample1ViewController.xib; sourceTree = "<group>"; };
 		B6A8D2D52D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewSample1CollectionViewCell.swift; sourceTree = "<group>"; };
 		B6A8D2D62D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICollectionViewSample1CollectionViewCell.xib; sourceTree = "<group>"; };
+		B6A8D2DA2D27C59F00E5C0C9 /* UICollectionViewSample2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewSample2ViewController.swift; sourceTree = "<group>"; };
+		B6A8D2DB2D27C59F00E5C0C9 /* UICollectionViewSample2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICollectionViewSample2ViewController.xib; sourceTree = "<group>"; };
+		B6A8D2DF2D27CA0B00E5C0C9 /* BannerCarouselSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCarouselSection.swift; sourceTree = "<group>"; };
+		B6A8D2E22D27CC1000E5C0C9 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		B6A8D2E52D27CD0A00E5C0C9 /* BannerCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCarouselCell.swift; sourceTree = "<group>"; };
+		B6A8D2E62D27CD0A00E5C0C9 /* BannerCarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCarouselCell.xib; sourceTree = "<group>"; };
+		B6A8D2EA2D27D9F900E5C0C9 /* UIImageView+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SetImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +96,7 @@
 		B63E3E6F2CF427A700D745A8 /* SwiftTraining */ = {
 			isa = PBXGroup;
 			children = (
+				B6A8D2E92D27D9E500E5C0C9 /* extension */,
 				B6A8D2CD2D277DF500E5C0C9 /* UICollectionView */,
 				B6A33CBD2CF71CDC00289078 /* UITableView */,
 				B686FD052CF5A9C100C055F0 /* AutoLayout */,
@@ -162,6 +177,7 @@
 		B6A8D2CD2D277DF500E5C0C9 /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				B6A8D2D92D27C4EF00E5C0C9 /* Sample2 */,
 				B6A8D2D02D277E3500E5C0C9 /* Sample1 */,
 			);
 			path = UICollectionView;
@@ -176,6 +192,51 @@
 				B6A8D2D62D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.xib */,
 			);
 			path = Sample1;
+			sourceTree = "<group>";
+		};
+		B6A8D2D92D27C4EF00E5C0C9 /* Sample2 */ = {
+			isa = PBXGroup;
+			children = (
+				B6A8D2E42D27CCE600E5C0C9 /* Cell */,
+				B6A8D2E12D27CB9700E5C0C9 /* Model */,
+				B6A8D2DE2D27C98E00E5C0C9 /* Section */,
+				B6A8D2DA2D27C59F00E5C0C9 /* UICollectionViewSample2ViewController.swift */,
+				B6A8D2DB2D27C59F00E5C0C9 /* UICollectionViewSample2ViewController.xib */,
+			);
+			path = Sample2;
+			sourceTree = "<group>";
+		};
+		B6A8D2DE2D27C98E00E5C0C9 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				B6A8D2DF2D27CA0B00E5C0C9 /* BannerCarouselSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		B6A8D2E12D27CB9700E5C0C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6A8D2E22D27CC1000E5C0C9 /* Banner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B6A8D2E42D27CCE600E5C0C9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B6A8D2E52D27CD0A00E5C0C9 /* BannerCarouselCell.swift */,
+				B6A8D2E62D27CD0A00E5C0C9 /* BannerCarouselCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B6A8D2E92D27D9E500E5C0C9 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				B6A8D2EA2D27D9F900E5C0C9 /* UIImageView+SetImage.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +306,9 @@
 				B63E3E7A2CF427A900D745A8 /* Assets.xcassets in Resources */,
 				B686FD0C2CF5AA0800C055F0 /* Sample1ViewController.xib in Resources */,
 				B6A33CBC2CF6E82B00289078 /* Sample4ViewController.xib in Resources */,
+				B6A8D2DD2D27C59F00E5C0C9 /* UICollectionViewSample2ViewController.xib in Resources */,
 				B6A33CC62CF72BF200289078 /* Sample1TableViewCell.xib in Resources */,
+				B6A8D2E82D27CD0A00E5C0C9 /* BannerCarouselCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,11 +323,16 @@
 				B6A33CBB2CF6E82B00289078 /* Sample4ViewController.swift in Sources */,
 				B63E3E712CF427A700D745A8 /* AppDelegate.swift in Sources */,
 				B6A8D2D72D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.swift in Sources */,
+				B6A8D2DC2D27C59F00E5C0C9 /* UICollectionViewSample2ViewController.swift in Sources */,
+				B6A8D2E32D27CC1000E5C0C9 /* Banner.swift in Sources */,
 				B6A33CB62CF6D2CA00289078 /* Sample3ViewController.swift in Sources */,
+				B6A8D2E02D27CA0B00E5C0C9 /* BannerCarouselSection.swift in Sources */,
 				B6A33CC52CF72BF200289078 /* Sample1TableViewCell.swift in Sources */,
 				B6A8D2D32D277E6300E5C0C9 /* UICollectionViewSample1ViewController.swift in Sources */,
 				B6A33CC12CF71D2000289078 /* Sample1TableViewController.swift in Sources */,
+				B6A8D2E72D27CD0A00E5C0C9 /* BannerCarouselCell.swift in Sources */,
 				B686FD102CF5C2EF00C055F0 /* Sample2ViewController.swift in Sources */,
+				B6A8D2EB2D27D9F900E5C0C9 /* UIImageView+SetImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
