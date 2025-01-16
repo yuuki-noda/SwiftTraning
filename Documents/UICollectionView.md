@@ -50,9 +50,9 @@ IBOutlet で CollectionView と FlowLayout を繋げます
 
 次は UICollectionViewCell を制作します。特に文字を入れるわけではないので分かりやすく背景色をつけるだけです
 
-|                                                   |                                                  |
-| ------------------------------------------------- | ------------------------------------------------ |
-| ![collectionView2](./images//collectionView2.png) | ![collectionView3](./images/collectionView3.png) |
+|                                                  |                                                  |
+| ------------------------------------------------ | ------------------------------------------------ |
+| ![collectionView2](./images/collectionView2.png) | ![collectionView3](./images/collectionView3.png) |
 
 次に CollectionView には delegate、datasource、cell を登録します
 
