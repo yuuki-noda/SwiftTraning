@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class UICollectionViewSample2ViewController<Section: Hashable & Sendable, Item: Hashable & Sendable>: UIViewController {
+final class UICollectionViewSample2ViewController: UIViewController {
     private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
         return UICollectionViewCompositionalLayout.init { [weak self] section, environment in
             guard let weakSelf = self else {
@@ -26,7 +26,7 @@ final class UICollectionViewSample2ViewController<Section: Hashable & Sendable, 
         return collectionView
     }()
     
-    private lazy var collectionViewDataSource: UICollectionViewDiffableDataSource<Section, Item> = {
+    private lazy var collectionViewDataSource: UICollectionViewDiffableDataSource<AnyHashable, AnyHashable> = {
         return UICollectionViewDiffableDataSource(collectionView: collectionView) { [weak self] collectionView, indexPath, itemIdentifier in
             guard let weakSelf = self else {
                 return UICollectionViewCell()
@@ -53,9 +53,9 @@ final class UICollectionViewSample2ViewController<Section: Hashable & Sendable, 
             sections: [
                 BannerCarouselSection(
                     banners: [
-                        Banner(imageURL: nil),
-                        Banner(imageURL: nil),
-                        Banner(imageURL: nil),
+                        Banner(color: .cyan),
+                        Banner(color: .cyan),
+                        Banner(color: .cyan),
                     ]
                 )
             ]
@@ -64,10 +64,10 @@ final class UICollectionViewSample2ViewController<Section: Hashable & Sendable, 
     
     func applySnapshot(sections: [BannerCarouselSection]) {
         self.sections = sections
-        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        var snapshot = NSDiffableDataSourceSnapshot<AnyHashable, AnyHashable>()
         for section in self.sections {
             snapshot.appendSections([section.identifier])
-            snapshot.appendItems(section.banners, toSection: section.identifier)
+            snapshot.appendItems(section.banners.map{ $0.identifier }, toSection: section.identifier)
         }
         collectionViewDataSource.apply(snapshot, animatingDifferences: true)
     }

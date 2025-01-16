@@ -17,6 +17,6 @@ class BannerCarouselCell: UICollectionViewCell {
     @IBOutlet weak var bannerImageView: UIImageView!
     
     func configure(_ banner: Banner) {
-        bannerImageView.setImage(banner.imageURL)
+        bannerImageView.backgroundColor = banner.color
     }
 }

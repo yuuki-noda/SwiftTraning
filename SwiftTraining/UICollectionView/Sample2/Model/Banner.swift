@@ -6,8 +6,15 @@
 //
 
 import Foundation
+import UIKit
 
-struct Banner: Hashable, Sendable {
+struct Banner {
     let identifier: UUID = UUID()
     let imageURL: URL?
+    let color: UIColor?
+    
+    init(imageURL: URL? = nil, color: UIColor? = nil) {
+        self.imageURL = imageURL
+        self.color = color
+    }
 }

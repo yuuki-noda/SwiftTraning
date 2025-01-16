@@ -62,7 +62,7 @@ itemSize は、この時点では端末サイズがわからないので指定�
 
 この時点でのコードはこんな感じです
 
-![collectionView1](./images/collectionView1.png)
+<img src="./images/collectionView1.png" width=50% />
 
 余談ですが端末のサイズが決まるのは viewDidLayoutSubviews 以降のため、willSet が呼ばれるタイミング(loadView と viewDidLoad の間)ではまだ端末サイズは確定してません
 
@@ -118,19 +118,81 @@ collectionView の サイズを更新するには、 collectionView の collecti
 
 そのため回転だけでなく Multitasking(splitView や slideOver)の場合も使うことができます。
 
-<img src="./images/collectionView9.png" width=50%/>
+<img src="./images/collectionView9.png" />
 
 実装できました。
 
-|                                             |                                           |
-| ------------------------------------------- | ----------------------------------------- |
-| <img src="./images/collectionView10.png" /> | <img src="./images/collectionView11.png"> |
+|                                             |                                             |
+| ------------------------------------------- | ------------------------------------------- |
+| <img src="./images/collectionView10.png" /> | <img src="./images/collectionView11.png" /> |
 
 ## バナーカルーセル(UICollectionViewCompositionalLayout)
 
+**注意点**
+
+このソースコードは Swift5 時点を想定しているため Sendable 対応をしていません。そのためいくつか警告が出ていると思いますが、基本的な考え方は変わらないです。
+
+**注意点終わり**
+
 個人的に CompositionalLayout が登場したことにより、すごく実装しやすくなったレイアウトとしてバナーカルーセルがあります。これを実装してみましょう
 
-カルーセルについて知らない人は
-| | |
-| --- | --- |
-| | |
+カルーセルについて知らない人は google で検索してください。
+
+詳しい CompositionalLayout と DiffalableDataSource の解説は別ページで行います。ここではこんな感じで実装するのか〜という感じで見てください
+
+CompositionalLayout では NSCollectionLayoutSection でレイアウトを管理しています
+
+[参考文献](https://developer.apple.com/documentation/uikit/uicollectionviewcompositionallayout)
+
+Section という大きな箱に group が複数積まれており、さらに group には複数の item があります。
+
+以下のコードはカルーセルセクションの layoutSection です。
+
+<img src="./images/collectionView12.png">
+
+このコードではまずグループを設定しています。今回の場合はカルーセルの 1 つで 1group を構成します。
+
+item のレイアウト指定部分を見てます。
+.fractionalWidth と.fractionalHeight は group の横幅と高さに対してどの程度の割合を持つかを指定できます。item の大きさと group の大きさは一緒なので 1.0 とします
+
+次に group です、ここで指定するのは section のサイズに対してどれぐらいのサイズにするかです。
+
+ここでは横幅を 80%に高さを 16:9 に合わせて計算をしています。横幅の割合に.fractionalHeight を指定できるので今まで collectionView の frame を使ってせっせと計算していたと追いますが指定が簡単です。
+
+なお、Section のサイズは CollectionView の AutoLayout が正しく決まっている場合はそれに合わせて決まります、今回は Section の横幅は端末横幅と一緒です。高さは、group の要素数に応じて決まります
+
+次に section では orthogonalScrollingBehavior を指定します。今回は .groupPagingCentered を指定します。これによって group 毎にセンター揃いで paging してくれます。今まで FlowLayout でちまちま計算していたのがこの変数 1 つで決まるのは感動ものです。
+
+[UICollectionLayoutSectionOrthogonalScrollingBehavior](https://developer.apple.com/documentation/uikit/uicollectionlayoutsectionorthogonalscrollingbehavior)
+
+interGroupSpacing は group 間の padding です。好きな数字を入れてください。
+
+あとはこれらを CompositionalLayout に渡すだけです。compositionalLayout では初期化時にクロージャーを受け取ります。その中で indexPath に応じたレイアウトを返してやる必要があります
+
+<img src="./images/collectionView13.png" />
+
+あとは reloadData に準ずる処理を行うだけです。
+
+今回 DiffalableDataSource を使います。[参考文献](https://qiita.com/maiyama18/items/28039293b4bbf886ce8e)
+
+DiffalableDataSource ではリロードを差分があったデータのみにすることによって高速化することができます。
+
+詳しい解説は別ページを参照してください。
+
+ここでは DiffalableDataSource に対して Cell を渡します
+
+まずは Section クラスです。レイアウトと cell の生成、item の保持をしています
+
+<img src="./images/collectionView14.png" />
+
+次に VC 側です
+
+<img src="./images/collectionView15.png" />
+
+DiffalableDataSource のクロージャーには cell を返します。
+
+またデータの適用は DataSource の apply で行えます。
+
+結果以下のような画面になります
+
+<img src="./images/collectionView1.gif" />
