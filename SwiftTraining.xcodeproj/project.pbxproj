@@ -33,6 +33,15 @@
 		B6A8D2E72D27CD0A00E5C0C9 /* BannerCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8D2E52D27CD0A00E5C0C9 /* BannerCarouselCell.swift */; };
 		B6A8D2E82D27CD0A00E5C0C9 /* BannerCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6A8D2E62D27CD0A00E5C0C9 /* BannerCarouselCell.xib */; };
 		B6A8D2EB2D27D9F900E5C0C9 /* UIImageView+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A8D2EA2D27D9F900E5C0C9 /* UIImageView+SetImage.swift */; };
+		B6BED9422D39FB3D00E24A66 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BED9412D39FB3D00E24A66 /* TaskListViewController.swift */; };
+		B6BED9462D3A005800E24A66 /* TaskListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BED9452D3A005800E24A66 /* TaskListTableViewCell.swift */; };
+		B6BED9492D3A00E200E24A66 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BED9482D3A00E200E24A66 /* Reusable.swift */; };
+		B6BED94D2D3A016100E24A66 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BED94C2D3A016100E24A66 /* UITableView+Reusable.swift */; };
+		B6BED94F2D3A01E600E24A66 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BED94E2D3A01E600E24A66 /* NibLoadable.swift */; };
+		B6BED9532D3A075A00E24A66 /* Task1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BED9512D3A075A00E24A66 /* Task1ViewController.swift */; };
+		B6BED9542D3A075A00E24A66 /* Task1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6BED9522D3A075A00E24A66 /* Task1ViewController.xib */; };
+		B6BED9572D3A095100E24A66 /* Task1PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BED9552D3A095100E24A66 /* Task1PopupViewController.swift */; };
+		B6BED9582D3A095100E24A66 /* Task1PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6BED9562D3A095100E24A66 /* Task1PopupViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +73,15 @@
 		B6A8D2E52D27CD0A00E5C0C9 /* BannerCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCarouselCell.swift; sourceTree = "<group>"; };
 		B6A8D2E62D27CD0A00E5C0C9 /* BannerCarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCarouselCell.xib; sourceTree = "<group>"; };
 		B6A8D2EA2D27D9F900E5C0C9 /* UIImageView+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SetImage.swift"; sourceTree = "<group>"; };
+		B6BED9412D39FB3D00E24A66 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		B6BED9452D3A005800E24A66 /* TaskListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewCell.swift; sourceTree = "<group>"; };
+		B6BED9482D3A00E200E24A66 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		B6BED94C2D3A016100E24A66 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		B6BED94E2D3A01E600E24A66 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		B6BED9512D3A075A00E24A66 /* Task1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task1ViewController.swift; sourceTree = "<group>"; };
+		B6BED9522D3A075A00E24A66 /* Task1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Task1ViewController.xib; sourceTree = "<group>"; };
+		B6BED9552D3A095100E24A66 /* Task1PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task1PopupViewController.swift; sourceTree = "<group>"; };
+		B6BED9562D3A095100E24A66 /* Task1PopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Task1PopupViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +114,8 @@
 		B63E3E6F2CF427A700D745A8 /* SwiftTraining */ = {
 			isa = PBXGroup;
 			children = (
+				B6BED9472D3A00A600E24A66 /* Reusable */,
+				B6BED9402D39FB0C00E24A66 /* Task */,
 				B6A8D2E92D27D9E500E5C0C9 /* extension */,
 				B6A8D2CD2D277DF500E5C0C9 /* UICollectionView */,
 				B6A33CBD2CF71CDC00289078 /* UITableView */,
@@ -239,6 +259,53 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
+		B6BED9402D39FB0C00E24A66 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				B6BED9502D3A040000E24A66 /* Task1 */,
+				B6BED9442D3A003B00E24A66 /* TaskList */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		B6BED9432D3A003500E24A66 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B6BED9452D3A005800E24A66 /* TaskListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B6BED9442D3A003B00E24A66 /* TaskList */ = {
+			isa = PBXGroup;
+			children = (
+				B6BED9432D3A003500E24A66 /* Cell */,
+				B6BED9412D39FB3D00E24A66 /* TaskListViewController.swift */,
+			);
+			path = TaskList;
+			sourceTree = "<group>";
+		};
+		B6BED9472D3A00A600E24A66 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				B6BED9482D3A00E200E24A66 /* Reusable.swift */,
+				B6BED94C2D3A016100E24A66 /* UITableView+Reusable.swift */,
+				B6BED94E2D3A01E600E24A66 /* NibLoadable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		B6BED9502D3A040000E24A66 /* Task1 */ = {
+			isa = PBXGroup;
+			children = (
+				B6BED9512D3A075A00E24A66 /* Task1ViewController.swift */,
+				B6BED9522D3A075A00E24A66 /* Task1ViewController.xib */,
+				B6BED9552D3A095100E24A66 /* Task1PopupViewController.swift */,
+				B6BED9562D3A095100E24A66 /* Task1PopupViewController.xib */,
+			);
+			path = Task1;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,12 +369,14 @@
 				B63E3E7D2CF427A900D745A8 /* LaunchScreen.storyboard in Resources */,
 				B686FD112CF5C2EF00C055F0 /* Sample2ViewController.xib in Resources */,
 				B6A33CB72CF6D2CA00289078 /* Sample3ViewController.xib in Resources */,
+				B6BED9542D3A075A00E24A66 /* Task1ViewController.xib in Resources */,
 				B6A8D2D42D277E6300E5C0C9 /* UICollectionViewSample1ViewController.xib in Resources */,
 				B63E3E7A2CF427A900D745A8 /* Assets.xcassets in Resources */,
 				B686FD0C2CF5AA0800C055F0 /* Sample1ViewController.xib in Resources */,
 				B6A33CBC2CF6E82B00289078 /* Sample4ViewController.xib in Resources */,
 				B6A8D2DD2D27C59F00E5C0C9 /* UICollectionViewSample2ViewController.xib in Resources */,
 				B6A33CC62CF72BF200289078 /* Sample1TableViewCell.xib in Resources */,
+				B6BED9582D3A095100E24A66 /* Task1PopupViewController.xib in Resources */,
 				B6A8D2E82D27CD0A00E5C0C9 /* BannerCarouselCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,20 +388,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6BED9492D3A00E200E24A66 /* Reusable.swift in Sources */,
 				B686FD0B2CF5AA0800C055F0 /* Sample1ViewController.swift in Sources */,
 				B6A33CBB2CF6E82B00289078 /* Sample4ViewController.swift in Sources */,
 				B63E3E712CF427A700D745A8 /* AppDelegate.swift in Sources */,
+				B6BED94D2D3A016100E24A66 /* UITableView+Reusable.swift in Sources */,
 				B6A8D2D72D27879600E5C0C9 /* UICollectionViewSample1CollectionViewCell.swift in Sources */,
 				B6A8D2DC2D27C59F00E5C0C9 /* UICollectionViewSample2ViewController.swift in Sources */,
 				B6A8D2E32D27CC1000E5C0C9 /* Banner.swift in Sources */,
+				B6BED94F2D3A01E600E24A66 /* NibLoadable.swift in Sources */,
 				B6A33CB62CF6D2CA00289078 /* Sample3ViewController.swift in Sources */,
 				B6A8D2E02D27CA0B00E5C0C9 /* BannerCarouselSection.swift in Sources */,
+				B6BED9462D3A005800E24A66 /* TaskListTableViewCell.swift in Sources */,
 				B6A33CC52CF72BF200289078 /* Sample1TableViewCell.swift in Sources */,
+				B6BED9572D3A095100E24A66 /* Task1PopupViewController.swift in Sources */,
 				B6A8D2D32D277E6300E5C0C9 /* UICollectionViewSample1ViewController.swift in Sources */,
 				B6A33CC12CF71D2000289078 /* Sample1TableViewController.swift in Sources */,
 				B6A8D2E72D27CD0A00E5C0C9 /* BannerCarouselCell.swift in Sources */,
 				B686FD102CF5C2EF00C055F0 /* Sample2ViewController.swift in Sources */,
+				B6BED9532D3A075A00E24A66 /* Task1ViewController.swift in Sources */,
 				B6A8D2EB2D27D9F900E5C0C9 /* UIImageView+SetImage.swift in Sources */,
+				B6BED9422D39FB3D00E24A66 /* TaskListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,7 +4,7 @@
 
 UIKit を用いたレイアウト、AutoLayout の組み方などを学べる予定
 
-初学者を想定しており、アプリを作ったことがない人をターゲットとしています。
+ある程度 Swift は読み書きできるよ。簡単なアプリなら作れる新卒 3 年目ぐらいを想定してます
 
 ## 前提
 
@@ -38,7 +38,7 @@ UIKit を用いたレイアウト、AutoLayout の組み方などを学べる予
 
 1. [UICollectionView について](./Documents/UICollectionView.md)
 
-1. [課題](./Documents/task1.md)
+1. [練習 1](./Documents/task/task1.md)
 
 ex. UICollectionViewCompositionlLayout について
 
